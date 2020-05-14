@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,AAAA,CACE,gBAAgB,CAAE,IAAI,CACtB,KAAK,CAAE,MAAM,CAChB,AACD,AAAA,IAAI,AAAA,CACA,gBAAgB,CAAE,IAAI,CACzB",
+    "sources": [
+        "../../article-web/public/scss/home.scss"
+    ],
+    "names": [],
+    "file": "home.css"
+}

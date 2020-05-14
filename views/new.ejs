@@ -1,0 +1,44 @@
+<%-  include ('../partials/header') %>
+
+
+<!-- <h1>Create a new Article</h1>
+
+<form action="/home" method = "POST">
+    <input type = "text" name = "title" placeholder="Add Title">
+    <input type = "text" name = "image" placeholder="image Url">
+    <input type = "text" name = "article" placeholder="Article">
+    <button>Submit</button>
+</form>
+
+
+
+<a href="/home">Go Back</a> -->
+
+
+<div style = "width: 30%; margin: 50px auto;">
+        
+        
+        <form action="/home" method = "POST">
+            <div class = "form-group">
+                    <input class = "form-control" type = "text" name = "title" placeholder="Add Title">
+            </div>
+    
+            <div class = "form-group">
+                    <input class = "form-control" type = "text" name = "image" placeholder="image Url">
+            </div>
+    
+            <div class = "form-group ">
+                    <textarea class="form-control" name = "article" placeholder="Click to Write Article" rows="8"></textarea>
+                  <!--  <input class = "form-control" type = "text" name = "article" placeholder="Click to Write Article"> -->
+            </div>
+           
+            <div class = "form-group">
+                <button type="button" class="btn btn-success btn-block">Submit</button>
+            </div>
+        </form>
+    
+    </div>
+
+
+
+<%-  include ('../partials/footer') %>

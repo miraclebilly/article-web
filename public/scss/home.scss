@@ -1,0 +1,27 @@
+
+$theme-colors: (
+    "primary": #82204A
+   );
+
+ @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// #card{
+//     text-align: center;
+// }
+
+.row{
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.navbar{
+    background-color: #82204A;
+    padding: 25px;
+}
+.nav-link{
+    color: white;
+    margin-left: 300px;
+}
+.container{
+    margin: 80px 23%;
+}
