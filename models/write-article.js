@@ -11,7 +11,7 @@ const articleSchema = new Schema({
         type: String,
         required: true
     },
-    content: {
+    article: {
         type: String,
         required: true
     }
