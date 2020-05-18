@@ -13,5 +13,9 @@ router.post('/home', homeController.postArticle);
 
 router.get('/home/new', homeController.getArticle);
 
+router.get('/home/:id', homeController.showArticle);
+
+
+
 
 module.exports = router;

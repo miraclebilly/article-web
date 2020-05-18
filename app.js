@@ -2,6 +2,7 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express();
 
@@ -25,5 +26,10 @@ app.use((req, res, next) => {
     res.status(404).send("<h1> Page not Found</h1>")
 });
 
-console.log('server is running');
-app.listen(3000);
+mongoose.connect('mongodb+srv://mimidata:RGLxO6q89NYtRwWx@cluster0-vpuy4.mongodb.net/article')
+.then(result => {
+    app.listen(3000);
+})
+.catch(err => {
+    conosole.log(err);
+})
