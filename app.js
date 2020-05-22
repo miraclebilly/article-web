@@ -1,12 +1,11 @@
-const path = require('path');
+const path          = require('path'),
+      express       = require('express'),
+      bodyParser    = require('body-parser'),
+      mongoose      = require('mongoose'),
+      app           = express();
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
 
-const app = express();
-
-app.set('view engine', 'ejs');
+      app.set('view engine', 'ejs');
 
 
 const homeRoute = require('./routes/home.js');
