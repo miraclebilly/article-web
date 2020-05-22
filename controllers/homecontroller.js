@@ -1,8 +1,9 @@
-const path = require('path');
-const Article = require('../models/write-article');
+const path          = require('path');
+const Article       = require('../models/write-article');
 
 
 exports.getArticles = (req, res, next) => {
+    //get all articles and display on the home page
     Article.find({}).then(articles => {
         res.render('home', { articles:articles });
     }).catch(err => {
@@ -11,19 +12,19 @@ exports.getArticles = (req, res, next) => {
     // res.render('home', {article:articles});
 }
 
-
 exports.postArticle = (req, res, next) => {
      //get data from form and send to home article array
      var title = req.body.title;
      var imageUrl = req.body.imageUrl;
      var article = req.body.article;
      var newArticle = {title: title, imageUrl: imageUrl, article: article}
-     Article.create(newArticle).then(newArticle => {
-        res.redirect('/home');
-     }).catch(err => {
+     Article.create(newArticle)
+        .then(newArticle => {
+            res.redirect('/home');
+        })
+        .catch(err => {
          console.log(err);
-     }) 
-              
+     })               
 }
 
 exports.getArticle = (req, res, next) => {
@@ -31,11 +32,13 @@ exports.getArticle = (req, res, next) => {
 }
 
 exports.showArticle = (req, res, next) => {
-    Article.findById(req.params.id).then(result => {
+    //show details of a single article
+    Article.findById(req.params.id)
+    .then(result => {
         res.render('show', {article: result}); 
-    }).catch(err => {
-        console.log(err);
     })
-    
+    .catch(err => {
+        console.log(err);
+    })    
 }
 

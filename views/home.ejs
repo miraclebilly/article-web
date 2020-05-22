@@ -10,11 +10,11 @@
                     <div class = 'card-title'>
                             <h4>  <%= write.title %> </h4>
                     </div>
-                            <img src="<%= write.imageUrl %>">
+                        <img src="<%= write.imageUrl %>">
                     </div>              
                                
                     <div class = 'card-body'>
-                            <p class = 'card-text'>  <%= write.article %> </p>
+                            <p class = 'card-text'>  <%= write.article.substring(0, 100) %>...</p>
                 
                            <a href="/home/<%= write._id%>" class="btn btn-primary">More</a> 
                     </div>  
@@ -22,7 +22,6 @@
          </div>
     <% }) %>
     
-
  </div>       
 </div>
 
