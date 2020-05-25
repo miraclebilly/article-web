@@ -8,20 +8,29 @@
     <img src="<%= article.imageUrl %>">
  </div>
  <p><%=article.article%></p>
-  
 
+ <% article.comments.forEach(function(comment){ %>
+        <p>
+          <strong><%= comment.author %></strong> - <%= comment.text %> 
+        </p>
+    
+<%}) %>
 
+         <form action="/home/<%=article._id%>/comments" method="POST">
+        <div class = "form-group">
+                <input class = "form-control" type = "text" name = "author" placeholder="Your name">
+        </div>
 
-
-
-
-
-
-
-
-
-
-
+        <div class = "form-group ">
+                <textarea class="form-control" name = "text" placeholder="Click to Write Comment" rows="2"></textarea>
+              
+        </div>
+       
+        <button>Add Comment</button>
+      
+    </form>
+    
+ 
 
 
 <%-  include ('../partials/footer') %>

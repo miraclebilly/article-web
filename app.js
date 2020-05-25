@@ -30,5 +30,5 @@ mongoose.connect('mongodb+srv://mimidata:RGLxO6q89NYtRwWx@cluster0-vpuy4.mongodb
     app.listen(3000);
 })
 .catch(err => {
-    conosole.log(err);
+    console.log(err);
 })

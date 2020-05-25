@@ -13,7 +13,11 @@ router.post('/home', homeController.postArticle);
 
 router.get('/home/new', homeController.getArticle);
 
+router.post('/home/:id/comments', homeController.postComment);
+
 router.get('/home/:id', homeController.showArticle);
+
+
 
 
 
