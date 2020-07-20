@@ -2,7 +2,10 @@ const path          = require('path'),
       express       = require('express'),
       bodyParser    = require('body-parser'),
       mongoose      = require('mongoose'),
-      app           = express();
+      app           = express(),
+      passport      = require('passport'),
+      LocalStrategy = require('passport-local');
+
 
 
       app.set('view engine', 'ejs');
@@ -10,14 +13,16 @@ const path          = require('path'),
 
 const homeRoute = require('./routes/home.js');
 const writeRoute = require('./routes/write.js');
+const authRoute = require('./routes/auth.js');
 
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(homeRoute);
+app.use(authRoute);
 // app.use(writeRoute);
 
-app.use('/', (req, res, next) => {
+app.use('/', (req, res, next) => { 
     res.redirect('/home');
 })
 
